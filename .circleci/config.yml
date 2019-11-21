@@ -1,0 +1,16 @@
+version: 2
+
+jobs:
+  test:
+    docker:
+      - image: ubuntu:14.04
+    steps:
+      - checkout
+      - run:
+          command: echo "Hello, CircleCI"
+
+workflows:
+  version: 2
+  my-workflow:
+    jobs:
+      - test
